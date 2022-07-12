@@ -47,7 +47,7 @@ docker build -t ngrok-docker .
 
 ```bash
 # 映射的端口分别是 http端口 https端口 隧道端口
-docker run -itd --name ngrok-docker -p 16880:16880 -p 16844:16844 -p 4443:4443 --env-file=.env ngrok-docker
+docker run -itd --name ngrok-docker -p 16880:16880 -p 16844:16844 -p 4443:4443 -v $PWD/ssl:/ssl --env-file=.env ngrok-docker
 ```
 
 #### 2.docker-compose 方式启动
