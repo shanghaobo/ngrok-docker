@@ -1,0 +1,20 @@
+version: "3"
+services:
+  ngrok:
+    restart: always
+    build: .
+    ports:
+      - ${NGROK_HTTP_PORT}:${NGROK_HTTP_PORT}
+      - ${NGROK_HTTPS_PORT}:${NGROK_HTTPS_PORT}
+      - ${NGROK_TUNNEL_PORT}:${NGROK_TUNNEL_PORT}
+      - ${NGROK_PORT_RANGE}:${NGROK_PORT_RANGE}
+    environment:
+      - TZ=Asia/Shanghai
+    env_file: .env
+    volumes:
+      - ./ssl:/ngrok/ssl
+    command: /sbin/entrypoint.sh
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2g"
