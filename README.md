@@ -52,6 +52,12 @@ docker run -itd --name ngrok-docker -p 16880:16880 -p 16844:16844 -p 4443:4443 -
 
 #### 2.docker-compose 方式启动
 
+- 构建镜像
+
+```bash
+docker-compose build ngrok
+```
+
 - 启动
 
 ```bash
