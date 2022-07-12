@@ -60,6 +60,18 @@ docker-compose up -d ngrok
 
 ## Ngrok 客户端
 
+将编译好的客户端从容器中拷贝出来
+
+```
+# Windows版
+docker cp ngrok-docker:/ngrok/bin/windows_amd64/ngrok.exe .
+
+# Linux版
+docker cp ngrok-docker:/ngrok/bin/ngrok .
+```
+
+注：`ngrok-docker`为容器名称或容器 id，可用`docker ps -a`查看容器 id 或名称
+
 #### Windows 版
 
 - 配置文件示例
