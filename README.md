@@ -22,11 +22,11 @@ NGROK_HTTPS_PORT=16844
 # 隧道端口
 NGROK_TUNNEL_PORT=4443
 # ssl证书路径（可不设置）
-NGROK_TLS_CRT=/ngrok/ssl/server.crt
+NGROK_TLS_CRT=/ssl/server.crt
 # ssl证书密钥路径（可不设置）
-NGROK_TLS_KEY=/ngrok/ssl/server.key
+NGROK_TLS_KEY=/ssl/server.key
 # ssl证书CA路径（可不设置）
-NGROK_TLS_CA=/ngrok/ssl/rootCA.pem
+NGROK_TLS_CA=/ssl/rootCA.pem
 ```
 
 #### 1.Docker 方式直接启动
