@@ -15,16 +15,22 @@
 ```
 # ngrok域名
 NGROK_DOMAIN=ngrok.xxx.com
+
 # http端口
 NGROK_HTTP_PORT=16880
+
 # https端口
 NGROK_HTTPS_PORT=16844
+
 # 隧道端口
 NGROK_TUNNEL_PORT=4443
+
 # ssl证书路径（可不设置）
 NGROK_TLS_CRT=/ssl/server.crt
+
 # ssl证书密钥路径（可不设置）
 NGROK_TLS_KEY=/ssl/server.key
+
 # ssl证书CA路径（可不设置）
 NGROK_TLS_CA=/ssl/rootCA.pem
 ```
