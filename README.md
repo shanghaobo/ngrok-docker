@@ -78,16 +78,11 @@ docker cp ngrok-docker:/ngrok/bin/ngrok .
 
 ```cfg
 # ngrok.cfg
-server_addr: "test.ngrok.xxx.com:4443"
-# server_addr: "ngrok.xxx.com:4443"
+server_addr: "ngrok.xxx.com:4443"
 trust_host_root_certs: false
 tunnels:
-  https:
-    subdomain: "test1"
-    proto:
-      https: 8001
   http:
-    subdomain: "test2"
+    subdomain: "test"
     proto:
       http: 8001
   tcp:
@@ -143,17 +138,17 @@ ngrok.exe -config=ngrok.cfg -log=log.log start-all
 
 ```
 # ngrok.yml
-server_addr: "test.ngrok.xxx.com:4443"
-trust_host_root_certs: true
+server_addr: "ngrok.xxx.com:4443"
+trust_host_root_certs: false
 tunnels:
-  https:
-    subdomain: "test1"
+  http:
+    subdomain: "test"
     proto:
-      https: 8001
-  https2:
-    subdomain: "test2"
+      http: 8001
+  tcp:
+    remote_port: 23001
     proto:
-      https: 8002
+      tcp: 8001
 ```
 
 - 启动客户端
