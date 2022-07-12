@@ -8,7 +8,7 @@
 
 修改`.env`文件配置。
 
-- 使用自己申请的证书时，将证书的`server.crt`、`server.key`、`rootCA.pem`文件放在项目的`ssl`目录内，并配置路径为`/ngrok/ssl/xxx`。
+- 使用自己申请的证书时，将证书的`server.crt`、`server.key`、`rootCA.pem`文件放在项目的`ssl`目录内，并配置路径为`/ssl/xxx`。
 - 如不使用自己的证书，将`.env`里的`NGROK_TLS_CRT`、`NGROK_TLS_KEY`、`NGROK_TLS_CA`去掉即可在编译时生成自签名证书。（若无 https 代理需求，使用自签名证书即可）
 - 如果使用自己申请的证书，旧证书过期后若新申请的证书 CA 与原来的一致，可直接修改此处的证书路径后重启 docker 服务，不需要重新编译客户端。
 
