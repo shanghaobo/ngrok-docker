@@ -12,7 +12,7 @@ services:
       - TZ=Asia/Shanghai
     env_file: .env
     volumes:
-      - ./ssl:/ngrok/ssl
+      - ./ssl:/ssl
     command: /sbin/entrypoint.sh
     logging:
       driver: "json-file"
