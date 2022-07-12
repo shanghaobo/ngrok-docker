@@ -157,6 +157,6 @@ tunnels:
 ./ngrok --config=ngrok.yml start-all -log stdout
 ```
 
-#### 其他
+## 其他
 
 若配置了 `https` 且没有用 `443` 端口，访问时需要加端口号（如`https://ngrok.xxx.com:16844`），可通过配置 Nginx 去掉端口号访问。具体参考：[https://www.qinyu.cc/archives/128.html](https://www.qinyu.cc/archives/128.html)
