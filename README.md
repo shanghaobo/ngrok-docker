@@ -35,17 +35,17 @@ NGROK_TLS_KEY=/ssl/server.key
 NGROK_TLS_CA=/ssl/rootCA.pem
 ```
 
-#### 1.Docker 方式直接启动
+#### 1.Docker 方式启动
 
 - 构建 Docker 镜像
 
-```
+```bash
 docker build -t ngrok-docker .
 ```
 
 - 启动 Docker 容器
 
-```
+```bash
 # 映射的端口分别是 http端口 https端口 隧道端口
 docker run -itd --name ngrok-docker -p 16880:16880 -p 16844:16844 -p 4443:4443 --env-file=.env ngrok-docker
 ```
@@ -54,7 +54,7 @@ docker run -itd --name ngrok-docker -p 16880:16880 -p 16844:16844 -p 4443:4443 -
 
 - 启动
 
-```
+```bash
 docker-compose up -d ngrok
 ```
 
@@ -62,7 +62,7 @@ docker-compose up -d ngrok
 
 将编译好的客户端从容器中拷贝出来
 
-```
+```bash
 # Windows版
 docker cp ngrok-docker:/ngrok/bin/windows_amd64/ngrok.exe .
 
@@ -128,7 +128,7 @@ tunnels:
 
 - 启动客户端
 
-```
+```bash
 ngrok.exe -config=ngrok.cfg -log=log.log start-all
 ```
 
@@ -136,7 +136,7 @@ ngrok.exe -config=ngrok.cfg -log=log.log start-all
 
 - 配置文件
 
-```
+```yml
 # ngrok.yml
 server_addr: "ngrok.xxx.com:4443"
 trust_host_root_certs: false
@@ -153,6 +153,6 @@ tunnels:
 
 - 启动客户端
 
-```
+```bash
 ./ngrok --config=ngrok.yml start-all -log stdout
 ```
